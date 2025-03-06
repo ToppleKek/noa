@@ -28,7 +28,5 @@ jobs:
       with:
         msystem: clang64
         update: true
-    - name: setup path
-      run: export PATH="$PATH:/c/Program Files/LLVM/bin"
     - name: build examples
-      run: ./build.sh
+      run: PATH="$PATH:/c/Program Files/LLVM/bin" ./build.sh
